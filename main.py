@@ -19,6 +19,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",        # local Next.js dev
         "https://*.vercel.app",         # any Vercel deployment
+        "https://pricesense-frontend.vercel.app"
     ],
     allow_credentials=True,
     allow_methods=["*"],                # allow GET, POST, PUT, DELETE etc.
