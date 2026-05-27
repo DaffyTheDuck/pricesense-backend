@@ -17,13 +17,12 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",        # local Next.js dev
-        "https://*.vercel.app",         # any Vercel deployment
-        "https://pricesense-frontend.vercel.app"
+        "http://localhost:3000",
+        "https://pricesense-frontend.vercel.app",
     ],
-    allow_credentials=True,
-    allow_methods=["*"],                # allow GET, POST, PUT, DELETE etc.
-    allow_headers=["*"],                # allow all headers
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allow_headers=["*"],
 )
 
 # ─── REGISTER ROUTES ──────────────────────────────────────────────
